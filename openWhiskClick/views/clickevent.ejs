@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title><%= title %></title>
+	<link rel='stylesheet' href='/stylesheets/style.css' />
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
+	<script src="//code.angularjs.org/snapshot/angular-touch.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="angularjs/clickevent.js"></script>
+	</head>
+	<body ng-app="clickevent">
+		<!--div ui-view="header"></div>
+	    <div- ui-view="content"></div-->
+		<div class="jumbotron" style="text-align:center">
+			<h1>Click Event Processor</h1>
+			<h3>Please swipe along the arrows. This will send your data to the server and get a response. Note that if you do not swipe in the direction where the arrow is pointing, there would be no action to take.</h3>
+		    <md-card>
+				 <div id="swipeContainer" ng-controller="clickevent as ctrl" layout="row" ng-cloak>
+				    <div flex layout="row">
+				       <div class="demo-swipe" md-swipe-left="onSwipeLeft()">
+				          <span class="no-select"><img src="images/left-arrow.png"></span></span>
+				       </div>
+				       <md-divider></md-divider>
+				       <div class="demo-swipe" md-swipe-right="onSwipeRight()">
+				          <span class="no-select"><img src="images/right-arrow.png"></span>
+				       </div>
+				    </div>
+				    <md-divider></md-divider>
+				    <div flex layout="row">
+				       <div flex layout="row" layout-align="center center" class="demo-swipe" md-swipe-up="onSwipeUp()">
+				          <span class="no-select"><img src="images/up-arrow.png"></span>
+				       </div>
+				       <md-divider></md-divider>
+						<div flex layout="row" layout-align="center center" class="demo-swipe" md-swipe-down="onSwipeDown()">
+				        	<span class="no-select"><img src="images/down-arrow.png"></span>
+						</div>
+				    </div>
+				</div>
+			</md-card>
+		</div>
+	</body>
+</html>
